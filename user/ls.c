@@ -56,7 +56,9 @@ ls(char *path)
     strcpy(buf, path);
     p = buf+strlen(buf);
     *p++ = '/';
+    //读文件夹的目录项
     while(read(fd, &de, sizeof(de)) == sizeof(de)){
+      //目录项无效  
       if(de.inum == 0)
         continue;
       memmove(p, de.name, DIRSIZ);

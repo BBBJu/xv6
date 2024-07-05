@@ -3,7 +3,7 @@
 
 #include "syscall.h"
 
-# exec(init, argv)
+# exec(init, argv)0
 .globl start
 start:
         la a0, init

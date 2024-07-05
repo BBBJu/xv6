@@ -91,14 +91,18 @@ walk(pagetable_t pagetable, uint64 va, int alloc)
   for(int level = 2; level > 0; level--) {
     pte_t *pte = &pagetable[PX(level, va)];
     if(*pte & PTE_V) {
+      //如果地址有效，拿到下一层页表的虚拟地址
       pagetable = (pagetable_t)PTE2PA(*pte);
     } else {
+      //如果无效，且alloc为真，则给这个页表分配内存
       if(!alloc || (pagetable = (pde_t*)kalloc()) == 0)
         return 0;
       memset(pagetable, 0, PGSIZE);
+      //将新分配的页表链接到上一层页表中
       *pte = PA2PTE(pagetable) | PTE_V;
     }
   }
+  //拿到指向真正的物理地址的指针
   return &pagetable[PX(0, va)];
 }
 
@@ -162,6 +166,7 @@ mappages(pagetable_t pagetable, uint64 va, uint64 size, uint64 pa, int perm)
       return -1;
     if(*pte & PTE_V)
       panic("mappages: remap");
+      //保存虚拟地址到物理地址的映射，此处的pte是三级页表的最后一级的页表项，存物理地址的PPN，并添加flag
     *pte = PA2PTE(pa) | perm | PTE_V;
     if(a == last)
       break;

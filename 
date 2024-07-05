@@ -1,0 +1,2080 @@
+[33mcommit 77da51a3c309a4e41a7514982a34f064a44001a9[m[33m ([m[1;36mHEAD -> [m[1;32mutil[m[33m, [m[1;31morigin/util[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Sanjit Bhat <sanjit.bhat@gmail.com>
+Date:   Thu Sep 21 10:30:00 2023 -0400
+
+    clean all zip files, even old ones
+
+[33mcommit 6ba06c6a6d6f036081327a330b4aa57c22dc49a9[m
+Author: Sanjit Bhat <sanjit.bhat@gmail.com>
+Date:   Tue Sep 19 14:21:01 2023 -0400
+
+    update grading and zipball rule
+
+[33mcommit 63f1eb99e584ac2aee2c5831824d71a7220dbc7f[m
+Author: Sanjit Bhat <sanjit.bhat@gmail.com>
+Date:   Tue Sep 12 14:03:13 2023 -0400
+
+    Makefile: new submission system
+
+[33mcommit 9ffdd55f1013700062859c3c8ff60bfb25db9731[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Tue Aug 15 18:04:27 2023 -0400
+
+    x
+
+[33mcommit 74c1eba516fdb0ec1a17b16be7e76613ccba92bf[m[33m ([m[1;31morigin/riscv[m[33m)[m
+Author: asselism <asselism@mit.edu>
+Date:   Mon Oct 17 16:02:54 2022 -0400
+
+    Made va and size page aligned in mappages
+
+[33mcommit 0802d56a9be156ab7228074cbf4da73c149fb911[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Mon Oct 17 04:10:01 2022 -0400
+
+    x
+
+[33mcommit 4a88273db5df00c5d3397ad5bcef50eb68f4bef8[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Mon Oct 17 04:07:24 2022 -0400
+
+    oops. scheduler() inherits the interrupt status of the
+    most recent process to run, so it must explicitly
+    turn them on again. It would be better if cpu->intena
+    were really thread->intena.
+
+[33mcommit f376ad7f1f80bddfb754b21811d17959c45d43a4[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Sun Oct 16 15:28:21 2022 -0400
+
+    scheduler()'s intr_on() is in the wrong place, reflecting
+    the locking scheme from long ago.
+
+[33mcommit 348cf7fee4023fce9b023145d89429ee8fdde00d[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Wed Oct 12 13:07:55 2022 -0400
+
+    forkret first memory model
+
+[33mcommit d2b2dff7490f2c4b8e91f79940fc46f0361c216c[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Tue Oct 4 11:52:57 2022 -0400
+
+    fix copyout() to refuse to write a read-only page
+
+[33mcommit 989e8f2f1f5bd68731472874bed19fab48a202af[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Sun Sep 18 16:32:21 2022 -0400
+
+    Remove unused PLIC_M* macros
+
+[33mcommit 4b46c0c6eb464782faa36d158246ba4e3238c970[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Sun Sep 11 13:51:11 2022 -0400
+
+    Use O_RDONLY instead of 0
+
+[33mcommit 463ae0abc3225d6e6de4a5a1ad57e64ab76b2b6f[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Fri Sep 9 09:17:37 2022 -0400
+
+    handle negative arguments to sleep() a little better
+
+[33mcommit f5b93ef12f7159f74f80f94729ee4faabe42c360[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Thu Aug 25 14:20:52 2022 -0400
+
+    Update acks
+    61810
+
+[33mcommit 3d6ce9b308399f8c49c13653bd4ac21ca2311f26[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Thu Aug 25 09:45:35 2022 -0400
+
+    Separate tests in slow and quick.  The slow tests run xv6 out of
+    memory, out of disk space, or test big directories.
+    
+    Support -q option to run only the quick tests, which saves about
+    7mins.
+    
+    Clean up driver by removing duplicated code.
+
+[33mcommit ed101befeefe470e49bec32b9f4efd600bdbda46[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Wed Aug 24 13:47:47 2022 -0400
+
+    comment the sfences
+
+[33mcommit 581bc4cbd1f6f5c207e729b78fac4328aef01228[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Wed Aug 24 13:42:59 2022 -0400
+
+    sfence before enabling paging
+
+[33mcommit 29ce3161f8c3604541045fd6d6202b9fdfccc6c6[m
+Merge: 9c1b8a4 cc486dd
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Wed Aug 24 13:24:37 2022 -0400
+
+    Merge branch 'riscv' of g.csail.mit.edu:xv6-dev into riscv
+
+[33mcommit 9c1b8a4eb085d7c639c2039fc14beba83d95653e[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Wed Aug 24 13:24:24 2022 -0400
+
+    sfence before writing satp, as well as after
+
+[33mcommit cc486ddee0c617ab2a0bd000b4674e1094661386[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Wed Aug 24 08:57:56 2022 -0400
+
+    Help students read this C syntax
+
+[33mcommit 96047832c62e6a172c92f9ead6715b553d4c2271[m
+Merge: 7c1810e ac8c0bb
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Tue Aug 23 12:26:39 2022 -0400
+
+    Merge branch 'riscv' of g.csail.mit.edu:xv6-dev into riscv
+
+[33mcommit 7c1810e1ae9268581de6bec30cdb696c25bae030[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Tue Aug 23 12:26:26 2022 -0400
+
+    tolerate running out of inodes
+
+[33mcommit ac8c0bb177da1119364d10a1a25a14b6dd238cce[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Tue Aug 23 11:56:29 2022 -0400
+
+    x
+
+[33mcommit 948cfbdb1ff8af3924fe149960824d601df13163[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Tue Aug 23 11:21:26 2022 -0400
+
+    Rename test to textwrite
+
+[33mcommit 858fc68bdfcbce2f5367220a68132ea30c900f09[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Tue Aug 23 11:19:33 2022 -0400
+
+    Linker script makes binaries bigger; use larger disk so that usertests
+    can run.
+    
+    Must assumed_free in badwrite() be adjusted?
+
+[33mcommit ccb7bd14c7303a77f8f99928e2297ddd815674b1[m
+Merge: 4cd4d19 8621be8
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Tue Aug 23 11:01:06 2022 -0400
+
+    Merge branch 'riscv' into uvm-perm
+
+[33mcommit 4cd4d194b8827af4971a81ad28968499925f884f[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Tue Aug 23 10:54:40 2022 -0400
+
+    Use simple linker script to force data segment to be page aligned
+
+[33mcommit 8621be8f3d105cd73ffbc681f9810d04b083b0ae[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Tue Aug 23 08:52:15 2022 -0400
+
+    tolerate out of disk when creating . and .. in mkdir()
+
+[33mcommit dc405cdb7b4e4d4bb3fc50b3e7f44e8795c0218e[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Tue Aug 23 08:23:12 2022 -0400
+
+    don't panic if out of disk space when extending a directory.
+
+[33mcommit cd6207a972cf7692dceb837f460234eae9df5052[m
+Merge: bc48c2b 4f716c8
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Tue Aug 23 07:31:08 2022 -0400
+
+    Merge branch 'riscv-killed' into riscv
+
+[33mcommit bc48c2be47ed4994d23327980737fef441fbbcc8[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Mon Aug 22 20:44:02 2022 -0400
+
+    Add ref to this nice page about Chapter 9's regexp matcher
+
+[33mcommit 2f0b4d698bc48f4efb4b9fdca20f415ec765bf41[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Mon Aug 22 19:58:33 2022 -0400
+
+    Use pp instead of np to be more consistent
+
+[33mcommit 2a391ebc8ba1fd0e6f0899277218d531fd5c7396[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Mon Aug 22 19:53:09 2022 -0400
+
+    Make argint() and argaddr() of type void (thanks Harry Porter)
+
+[33mcommit 7086197c27f7c00544ca006561336d8d5791a482[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Mon Aug 22 19:36:11 2022 -0400
+
+    Simplify uartputc slightly (thanks Harry Porter)
+
+[33mcommit 63ef3b8c9fd15d5ea5775813cda94a3c64cff0d3[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Mon Aug 22 13:49:15 2022 -0400
+
+    slightly better comments
+
+[33mcommit f2ee8690addf0aa52b5de2061fe6d659574406f9[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Wed Aug 17 20:38:11 2022 -0400
+
+    x
+
+[33mcommit 1d4c437ea17e3254fe6138fd8dd181de413a43bf[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Wed Aug 17 20:37:22 2022 -0400
+
+    Use uint64 (thanks carlclone and Harry Porter)
+
+[33mcommit cef1b57d4a97f15e9858804e368f7928b579b88e[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Mon Aug 15 19:02:19 2022 -0400
+
+    Compile user binary to map text without W and data without X
+    Use the flags in elf header to set vm permissions
+    Modify pgbug() so that usertests text segment is without W
+    Add test to check app cannot write text segment
+
+[33mcommit 2175c6b0b667b13e09c710c36e4a3ae8fc7c97dc[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Mon Aug 15 19:01:34 2022 -0400
+
+    Run tests in the order in which they appear in the file
+
+[33mcommit 7a6d57235c41df877b3fb2322cf770e65e864058[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Fri Aug 12 14:59:30 2022 -0400
+
+    Costmestic change (thanks Harry Porter)
+
+[33mcommit 899cc02660232092209a5db57b326ab7b49813dd[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Fri Aug 12 13:22:10 2022 -0400
+
+    Experiment with being more precise setting permissions for user pages.
+    Growing adds R|W pages (without X).  Exec() marks the stack only R|W.
+    
+    Probably could setup permissions for text and data better if we call
+    ld with --no-omagic instead of -N.
+
+[33mcommit 8f58cc7df99e9f697ca3843886802ecab5cb8991[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Fri Aug 12 12:59:33 2022 -0400
+
+    Cosmetic change (thanks Harry Porter)
+
+[33mcommit 62bc610424314d8bcebdbe5e331e63835df1a13f[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Fri Aug 12 11:47:39 2022 -0400
+
+    cosmetic changes (thanks Harry Porter)
+
+[33mcommit dd5a720044c41a88e0a09f174fb602289b93fe28[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Fri Aug 12 10:57:16 2022 -0400
+
+    cosmetic changes (thanks Harry Porter)
+
+[33mcommit 8bd04852c911fcb7c74f2c61350c306f18ae58b0[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Fri Aug 12 09:43:18 2022 -0400
+
+    Delete rtcdate, which is a left-over from an old lab (thanks Harry Porter)
+
+[33mcommit 48d1a7ffa59e0bf59972b8c852661700bcda797d[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Fri Aug 12 09:14:54 2022 -0400
+
+    Add USED to states (thanks Harry Porter)
+
+[33mcommit 4f716c8550b406c3e4b3e0c21b986ef99bc06c40[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Thu Aug 11 14:22:00 2022 -0400
+
+    Use p->lock to read p->killed
+
+[33mcommit 429c7b717edd4c23d3666327986052b9b6eb29eb[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Thu Aug 11 08:42:52 2022 -0400
+
+    Use atomic store_n and load_n
+
+[33mcommit 975f3b31d3fac2c271df3107263df6ae454a98be[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Thu Aug 11 07:23:17 2022 -0400
+
+    Clean up using killed()
+
+[33mcommit 4087a6e7fc773ba4eb217dfc196dfe1eee84b25d[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Wed Aug 10 20:35:42 2022 -0400
+
+    Read and write p->killed using atomics
+
+[33mcommit b1fd09335ae1c112a01cedad0a6abd584fe8dca7[m
+Merge: e67cb40 e606f95
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Wed Aug 10 10:31:54 2022 -0400
+
+    Merge remote-tracking branch 'g/riscv' into riscv
+
+[33mcommit e67cb408d4f66653690fc10b49410273302472e0[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Wed Aug 10 07:06:49 2022 -0400
+
+    x
+
+[33mcommit 07cf0eb25518089a96e8778e6809fc88d292ea5b[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Wed Aug 10 06:42:17 2022 -0400
+
+    have sh print prompt with write, not printf, to make
+    system call lecture a little clearer.
+
+[33mcommit c908d2013233a6d60c2f37292dfd6ac18075d6d4[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Wed Aug 10 06:41:00 2022 -0400
+
+    put walk() in defs.h so it's clear students can call it
+
+[33mcommit 143cde639d66ed3d56d93b6324fd2564bab16e45[m
+Merge: 76ad8e9 535f179
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Wed Aug 10 07:18:39 2022 -0400
+
+    Merge remote-tracking branch 'github/riscv' into riscv
+
+[33mcommit e606f95459c6e1ce6d44de6c0f2d5c5fc4f74eb5[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Wed Aug 10 07:06:49 2022 -0400
+
+    x
+
+[33mcommit c3a17f454a135dd1fc694ce8b203dda1233c341e[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Wed Aug 10 06:42:17 2022 -0400
+
+    have sh print prompt with write, not printf, to make
+    system call lecture a little clearer.
+
+[33mcommit 311479ceb74ecfed110cda4d07ac564fc4364ed2[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Wed Aug 10 06:41:00 2022 -0400
+
+    put walk() in defs.h so it's clear students can call it
+
+[33mcommit 76ad8e974fefb4588b0a318f6502fde6bd730097[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Wed Aug 10 06:37:21 2022 -0400
+
+    avoid user-level segfault if a process doesn't call exit()
+
+[33mcommit 872fa88e8afd24a8f228ba431fad380d326b0f36[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Wed Aug 10 06:13:52 2022 -0400
+
+    tolerate running out of disk blocks
+
+[33mcommit 7d573bae2ab70f0d0bd1807f0099c00e8f9e24f2[m
+Merge: f4b3edf 2462656
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Wed Aug 10 06:00:57 2022 -0400
+
+    Merge branch 'riscv' of g.csail.mit.edu:xv6-dev into riscv
+
+[33mcommit f4b3edf5ab211c6dfbb2befb1a4c1b6bd26e4222[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Wed Aug 10 06:00:40 2022 -0400
+
+    comment nits
+
+[33mcommit 535f1797f0d849e77b49bebec0b45077fc5fde9a[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Tue Aug 9 15:11:25 2022 -0400
+
+    nothing much
+
+[33mcommit 2462656f215822ffb3bcd854ddc68b3894058c59[m
+Author: John Jolly <jjolly@cs.utah.edu>
+Date:   Sat Nov 6 04:47:37 2021 +0000
+
+    [user/ls]: List specific device file
+    
+    When using the ls userspace program to list a specific device file,
+    nothing would be displayed. This was because ls only tests for T_FILE
+    and T_DIR. T_DEVICE files would fall through the case block.
+    
+    Adding T_DEVICE to the T_FILE case allows a device file to be listed.
+    
+        $ ls console
+        console        3 19 0
+
+[33mcommit 9f3673c4da3c2a829fe74f4b950c50568ca937dc[m
+Author: WaheedHafez <waheed_hafez@yahoo.com>
+Date:   Fri Nov 19 18:45:49 2021 +0200
+
+    fix 'kfree' comment in kalloc.c
+    
+    'kfree' has a parameter named 'pa' but referenced in the comment as 'v'.
+
+[33mcommit c1c16269b1991e1e1be16887d3e21d0f7e5f8d19[m
+Author: mrm <cmpl.error@gmail.com>
+Date:   Tue Dec 28 07:06:14 2021 +0900
+
+    fix comment in mkfs.c
+
+[33mcommit 62d8da06cd11f88163acd51fe2a27b0b005ef47f[m
+Author: John Jolly <jjolly@cs.utah.edu>
+Date:   Sat Nov 6 04:47:37 2021 +0000
+
+    [user/ls]: List specific device file
+    
+    When using the ls userspace program to list a specific device file,
+    nothing would be displayed. This was because ls only tests for T_FILE
+    and T_DIR. T_DEVICE files would fall through the case block.
+    
+    Adding T_DEVICE to the T_FILE case allows a device file to be listed.
+    
+        $ ls console
+        console        3 19 0
+
+[33mcommit 96da76a728d5737e05f1ef19c87ec6eb740f2e8c[m
+Author: WaheedHafez <waheed_hafez@yahoo.com>
+Date:   Fri Nov 19 18:45:49 2021 +0200
+
+    fix 'kfree' comment in kalloc.c
+    
+    'kfree' has a parameter named 'pa' but referenced in the comment as 'v'.
+
+[33mcommit f33f0d8622ab13fc6f4571bf10bfab54dd81b040[m
+Author: mrm <cmpl.error@gmail.com>
+Date:   Tue Dec 28 07:06:14 2021 +0900
+
+    fix comment in mkfs.c
+
+[33mcommit a2e4051b9932cba9d0b8d858044b09bf421f68c7[m
+Author: Ravjot Singh Samra <ravss@live.com>
+Date:   Tue Dec 28 13:53:42 2021 +1300
+
+    Added missing va_end().
+
+[33mcommit 431e21f7d49a53c853876cc9b74f356c3f4927b9[m
+Author: Ravjot Singh Samra <ravss@live.com>
+Date:   Tue Dec 28 13:53:42 2021 +1300
+
+    Added missing va_end().
+
+[33mcommit 7d8bfdcbe306f7f407a816a4f032cf1780d8c215[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Tue Aug 9 15:11:25 2022 -0400
+
+    nothing much
+
+[33mcommit dd431c400a78e3bd79cd1a51e117fc8f4d91d948[m
+Author: olf <Olf0@users.noreply.github.com>
+Date:   Thu Jan 20 23:27:06 2022 +0100
+
+    README: Fix formatting in acknowledgements
+
+[33mcommit 7c958af7828973787f3c327854ba71dd3077ad2d[m
+Author: Rahul Thomas <rapidclock@users.noreply.github.com>
+Date:   Sat Jul 16 01:47:13 2022 -0700
+
+    enable reading memory using gdb
+
+[33mcommit 27a669ef25c11e452bf2bbe01341adb36176ab73[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Tue Aug 9 14:17:46 2022 -0400
+
+    comment nits
+
+[33mcommit af9abaca0543e392812fcde1138e68892b6c70bc[m
+Merge: 3abd7a1 cf0c095
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Tue Aug 9 13:41:51 2022 -0400
+
+    Merge branch 'riscv' of g.csail.mit.edu:xv6-dev into riscv
+
+[33mcommit 3abd7a16dd6a0a529b7eab1ef31a3819b54a931e[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Tue Aug 9 13:41:45 2022 -0400
+
+    comment
+
+[33mcommit cf0c095721b22b8ce011484a2509cd27858cbe77[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Tue Aug 9 12:14:29 2022 -0400
+
+    sscratch cleanup
+
+[33mcommit 9fc9f755e1f9ec56a452b334f6112028e0ec0329[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Tue Aug 9 11:44:02 2022 -0400
+
+    adopt github PR98 (No need to store TRAPFRAME in sscratch register)
+
+[33mcommit ca6fc549341d30730247792b87edceacf1613834[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Mon Aug 8 11:10:54 2022 -0400
+
+    tweak virtio comments
+
+[33mcommit 84fb6f3dc2bf9d6fea6e21646352f74d063f432f[m
+Merge: 1b02b08 cd00a82
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Tue Aug 2 11:44:40 2022 -0400
+
+    Merge branch 'virtio' into riscv
+
+[33mcommit 1b02b08db18210f2c1efb4e184c482a06f690fbd[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Tue Aug 2 09:38:22 2022 -0400
+
+    Mark runcmd with attribute noreturn, since it doesn't return
+    
+    When compiling with gcc version 12, this change also avoids the
+    compiler warning "infinite recursion detected" for runcmd()
+
+[33mcommit 84a1bdb5aad37f9c0eb94e5917ee813e043b6d8f[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Tue Aug 2 09:37:30 2022 -0400
+
+    Revert "Not treat `infinite-recursion` as error"
+    
+    This reverts commit 759bb34113d214819b2f01b2c38c0b36a5ca775b.
+
+[33mcommit 759bb34113d214819b2f01b2c38c0b36a5ca775b[m
+Author: Dezhi Wu <wu543065657@163.com>
+Date:   Wed Jun 8 21:02:50 2022 +0800
+
+    Not treat `infinite-recursion` as error
+
+[33mcommit cd00a8233ad43be269908db5bdc28c5961a9dce9[m
+Author: Xi Wang <xi.wang@gmail.com>
+Date:   Sun Oct 17 22:33:39 2021 -0700
+
+    port virtio_disk to virtio spec 1.0+
+    
+    The legacy interface is confusing. It's better to make virtio_disk
+    conform to the virtio spec. This is supported in QEMU since 4.2 by
+    disabling force-legacy for virtio-mmio.
+
+[33mcommit a1da53a5a12e21b44a2c79d962a437fa2107627c[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Wed Sep 1 07:31:22 2021 -0400
+
+    update
+
+[33mcommit 8ca56e9e0b878a90bac9860e971b0d849d7a83e7[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Wed Sep 1 07:29:12 2021 -0400
+
+    memmove(dst, src, 0) leads to overflow in `while(n-- > 0)` as `n` is uint64 (thanks
+    Matúš Jókay <matus.jokay@stuba.sk>)
+
+[33mcommit bf4816c9c6a23ee5489ff4f0b04f21b002b3028e[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Wed Sep 1 07:24:07 2021 -0400
+
+    Delete unused code (Jude Rich <juder11@gmail.com>)
+
+[33mcommit 02424b1f8406d321e2f2a240328a2ee255a351af[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Tue Aug 31 21:05:42 2021 -0400
+
+    update
+
+[33mcommit a103113db0ffc06d6f0127cb2ef87cc6a4e518ae[m
+Author: yzhu <891085309@qq.com>
+Date:   Tue Oct 20 21:42:34 2020 +0800
+
+    fix ld warning: undefined symbol _entry
+
+[33mcommit 840aae871fa1df9fdc4684ccc39709bf2878f6ea[m
+Author: Pavan Maddamsetti <pavan.maddamsetti@gmail.com>
+Date:   Wed Oct 21 03:03:17 2020 -0400
+
+    die
+
+[33mcommit e07ca6614599e68747fa454da95f007f6941143a[m
+Author: Pavan Maddamsetti <pavan.maddamsetti@gmail.com>
+Date:   Sun Nov 8 01:56:57 2020 -0500
+
+    comment
+
+[33mcommit 19ff3796618b6c2874addf4414c1ae6f2c0b50b2[m
+Author: l0stman <endian.sign@gmail.com>
+Date:   Tue Nov 10 07:48:02 2020 +0300
+
+    exec() only accepts MAXARG arguments
+    
+    The terminating NULL string is already included (see sys_exec()).
+
+[33mcommit 91951429599eb21130432d1802f7bd1b1b7cbd61[m
+Author: l0stman <endian.sign@gmail.com>
+Date:   Tue Nov 10 08:31:16 2020 +0300
+
+    Assert that the size in mappages() is always positive
+    
+    If va % PGSIZE == 0 and size == 0, we have last < a at the start of
+    the loop so we might never terminate.  That being said, this
+    particular case couldn't be triggered for now.
+
+[33mcommit f55def8a64f5b5faa7373ba5e35c318cc4ea666f[m
+Author: kimjungwow <jw950310@kaist.ac.kr>
+Date:   Fri Dec 4 04:46:50 2020 +0000
+
+    Change `inode cache` in main.c to `inode table`
+
+[33mcommit dd6d5d0a410214f34906d42cc9f8ebb874e08945[m
+Author: amane-uehara <62415046+amane-uehara@users.noreply.github.com>
+Date:   Sat Dec 12 03:08:14 2020 +0900
+
+    I fixed a typo in the comment.
+
+[33mcommit 49f1e2f8886c6874ef4ac2b6e6d77aa156b04e9b[m
+Author: flespark <0860734llx@gmail.com>
+Date:   Sun Jan 3 21:07:12 2021 +0800
+
+    fix a invalid printf format string
+
+[33mcommit 1226b09dc4c0f3d9e97265e0fc03a81e04bdea2e[m
+Author: OptimisticSide <47266822+optimisticside@users.noreply.github.com>
+Date:   Fri Apr 16 09:14:13 2021 -0700
+
+    Remove setproc prototype
+
+[33mcommit f524198792678428b10e5ce55361823fe57de75e[m
+Author: Vadim Kolontsov <vadim@kolontsov.com>
+Date:   Sun May 16 21:56:46 2021 +0300
+
+    fix comment for 'sepc'
+
+[33mcommit 8d4ff0bc1e8e7750e17fae39572fa5996cb9f5e9[m
+Author: FIXED-TERM Chen Ian (BT-CO/QMM5) <cia1tp@bosch.com>
+Date:   Tue May 18 11:29:42 2021 +0800
+
+    fix typos in user/usertest.c & kernel/log.c
+
+[33mcommit 9655f71758003f93294e82926783024a7e4bcdde[m
+Author: Jonathan Behrens <fintelia@gmail.com>
+Date:   Mon Aug 30 16:27:52 2021 -0400
+
+    Configure PMP at boot
+
+[33mcommit 6de0381d619f01777d84cbcd3affa96ad376c2e1[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Tue Aug 10 07:12:41 2021 -0400
+
+    check for alignment just once
+
+[33mcommit 3b3f83f10036391047a6e2fd3eb7b1a93aa05ed6[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Fri Aug 6 11:06:24 2021 -0400
+
+    check that there's no panic if user process tries to write >= MAXVA
+
+[33mcommit 08c9eda85fe68b8f311494d4cf78cfacda06868d[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Fri Jul 2 14:24:45 2021 -0400
+
+    sync usertests
+
+[33mcommit 1841baa3dd04ca34b5c7d31169ee6735cc35447f[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Fri Jul 2 09:57:14 2021 -0400
+
+    keep usertests.c in sync with riscv-sol-2020
+
+[33mcommit 077323a8f0b3440fcc3d082096a2d83fe5461d70[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Mon Nov 23 19:30:15 2020 -0500
+
+    Rename icache to itable
+    
+    The inode cache isn't really a cache. The main purpose of it is to
+    allow for synchronization (locking individual inodes), providing
+    long-lived references to inodes, and ensuring that there is only inode
+    in memory.
+
+[33mcommit 6e3f75c2aa670bc0d47928cd48408b81e5bd758d[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Thu Nov 19 16:48:41 2020 -0500
+
+    suppress an incorrect error message in grind
+
+[33mcommit 231c08dc5e5e39a6fafda832e6935beb38ef3887[m
+Merge: 60b63b9 9599a8e
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Thu Nov 5 19:51:41 2020 -0500
+
+    Merge remote-tracking branch 'refs/remotes/origin/riscv' into riscv
+
+[33mcommit 60b63b9d077f2c9d722e8572e5e78379cfaef796[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Thu Nov 5 19:00:37 2020 -0500
+
+    x
+
+[33mcommit ef97f65025b3704a90fbde79ef3ce3a38bcb6899[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Thu Nov 5 17:32:35 2020 -0500
+
+    kill/status test
+
+[33mcommit b4c2851bb347d5243a4498fdd9e1f0c9a23e6498[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Thu Nov 5 11:09:21 2020 -0500
+
+    Be principled: acquire lock first
+
+[33mcommit 38084bcea84e79f5fff9ce8c7f91c077fc1eacd3[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Thu Nov 5 09:47:59 2020 -0500
+
+    proc_tree_lock -> wait_lock
+
+[33mcommit ba8d9f4808bd2c59df42a6615920a22e3735c359[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Thu Nov 5 07:32:10 2020 -0500
+
+    don't over-lock in exit()
+
+[33mcommit 9599a8e616dc5a1aa6b0c3b7c0c6ed9ffdf5e67a[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Thu Nov 5 19:00:37 2020 -0500
+
+    x
+
+[33mcommit d7b308fe81b9fdee1f6060f847b37a252214266a[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Thu Nov 5 17:32:35 2020 -0500
+
+    kill/status test
+
+[33mcommit b63d3506e9fbe7db1cd117db746fb58b7712ab4f[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Thu Nov 5 11:09:21 2020 -0500
+
+    Be principled: acquire lock first
+
+[33mcommit 774288e05a5891a4de0a165e2a65665714f6ca34[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Thu Nov 5 09:47:59 2020 -0500
+
+    proc_tree_lock -> wait_lock
+
+[33mcommit bc943c230960c414fd43b93317c3825f1a99c611[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Thu Nov 5 07:32:10 2020 -0500
+
+    don't over-lock in exit()
+
+[33mcommit 47323c97cf6bcf5e238c518762ba048e8795f57d[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Tue Nov 3 16:35:20 2020 -0500
+
+    oops
+
+[33mcommit 2875069973d3e0ca4a70f6e7648a92b14cf08ab6[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Tue Nov 3 15:02:08 2020 -0500
+
+    Frans' proc_lock.
+
+[33mcommit b48ea5d2209bb9addf43687739245734038b991e[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Sun Nov 1 11:11:38 2020 -0500
+
+    free proc if kalloc fails
+
+[33mcommit 5e392531c07966fd8a6bee50e3e357c553fb2a2f[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Fri Oct 23 10:18:30 2020 -0400
+
+    hopefully make writei more correct
+
+[33mcommit e1bb4c74346bc439e8c0cd93750f90bb82c537c8[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Thu Oct 22 06:36:36 2020 -0400
+
+    test for closed pipe or killed on every char, not just if pipe full
+
+[33mcommit 329935eca8484d7f1d34c1d43b16c495d861ad75[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Tue Oct 20 07:02:44 2020 -0400
+
+    fix uart.c to work with UART_TX_BUF_SIZE == 1
+
+[33mcommit 13dccb0380d3c694083095040fadd03bfe4f598c[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Tue Oct 20 06:55:51 2020 -0400
+
+    consolewrite does not need cons.lock -- can lead to sleep() with lock held
+
+[33mcommit 7dea4b93c82354d5a24e8882860af5a1d92282e6[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Tue Nov 3 16:35:20 2020 -0500
+
+    oops
+
+[33mcommit 8d4fbc6e2a4c8373453f2e1380bb8c6ca8d334c0[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Tue Nov 3 15:02:08 2020 -0500
+
+    Frans' proc_lock.
+
+[33mcommit af570f582cafe3326116f202ab26d81fe95d320a[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Sun Nov 1 11:11:38 2020 -0500
+
+    free proc if kalloc fails
+
+[33mcommit d7c0a1b7a703f7366942092f9cf421b6cd111a36[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Fri Oct 23 10:18:30 2020 -0400
+
+    hopefully make writei more correct
+
+[33mcommit 147855e5219e91886e71e796fd51fbc6b1a056d2[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Thu Oct 22 06:36:36 2020 -0400
+
+    test for closed pipe or killed on every char, not just if pipe full
+
+[33mcommit 4df1a265cb994ce9cbf9e7dce88b79b1dd7cc5dd[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Tue Oct 20 07:02:44 2020 -0400
+
+    fix uart.c to work with UART_TX_BUF_SIZE == 1
+
+[33mcommit 55ad99f7293fc6d639a30d36820a770ee71a6cae[m
+Merge: 286b2f3 05a7db1
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Tue Oct 20 06:58:58 2020 -0400
+
+    Merge branch 'riscv' of g.csail.mit.edu:xv6-dev into riscv
+
+[33mcommit 286b2f3c3306a621c415e8c7ce67bc2a6501998a[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Tue Oct 20 06:55:51 2020 -0400
+
+    consolewrite does not need cons.lock -- can lead to sleep() with lock held
+
+[33mcommit 05a7db1a0a20187760d8a78ff7badfa4cc7e3314[m
+Author: Fumiya Shigemitsu <shfy1014@gmail.com>
+Date:   Mon Oct 21 21:01:07 2019 +0900
+
+    Fix minor typos
+
+[33mcommit d4cecb269f2acc61cc1adc11fec2aa690b9c553b[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Wed Oct 14 20:03:14 2020 -0400
+
+    kvmmake() makes a complete kernel page table, matching Figure 3.3
+
+[33mcommit 21cfc978096c3ffa2fdd3bde4e698482a5dff6c3[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Wed Oct 7 12:57:55 2020 -0400
+
+    set riscv use-compressed-breakpoints yes
+
+[33mcommit 93378618df7f71464f72284ccc699948c699d683[m
+Author: Fumiya Shigemitsu <shfy1014@gmail.com>
+Date:   Mon Oct 21 21:01:07 2019 +0900
+
+    Fix minor typos
+
+[33mcommit c64aa44d7b5167f5b061b1e2fdf94d240a98b2bb[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Wed Oct 14 20:03:14 2020 -0400
+
+    kvmmake() makes a complete kernel page table, matching Figure 3.3
+
+[33mcommit 806580d6423274e7b38329362f64a549e04ddbab[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Wed Oct 7 12:57:55 2020 -0400
+
+    set riscv use-compressed-breakpoints yes
+
+[33mcommit bebecfd6fd449fb86f73b81982f8c90e5b6bbf90[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Mon Oct 5 15:28:01 2020 -0400
+
+    more explicable scratch area size for machine-mode timer interrupts
+
+[33mcommit c199afe4c8d77c8da24e1fda479391c9ffa76239[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Mon Oct 5 09:17:47 2020 -0400
+
+    Don't map the CLINT, since it never used in the kernel in supervisor mode
+
+[33mcommit c61cc694137035c58c1d2439a4c44e0f924d41db[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Mon Oct 5 06:59:33 2020 -0400
+
+    eliminate virtio DMA into kernel stacks.
+
+[33mcommit 3092fe2c9ecf285cbf3c631b484c88fe5071224e[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Mon Oct 5 06:26:58 2020 -0400
+
+    improve virtio_disk comments; bring it closer to wording in the spec
+
+[33mcommit 548ffc97e1befae9e88604e919b4c87fa33f1e9d[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Sun Oct 4 13:29:04 2020 -0400
+
+    don't unpin if recovering -- the resulting negative refcnt suppresses next unpin
+
+[33mcommit aeaf610c671dbf180fa276821aa8fc01b2461aef[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Sun Oct 4 09:21:03 2020 -0400
+
+    avoid deadlock by disk intr acking interrupt first, then processing ring
+
+[33mcommit 3c70be9070f0a8523e81733ce6f767315d7a7bf6[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Sun Oct 4 08:44:32 2020 -0400
+
+    often causes deadlock after a few minutes
+
+[33mcommit 6c167595037a0872338d999c7ce0971a5606dedb[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Mon Oct 5 15:28:01 2020 -0400
+
+    more explicable scratch area size for machine-mode timer interrupts
+
+[33mcommit 0c55849d28a2df0416d28c83bc9da47411e2c78f[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Mon Oct 5 09:17:47 2020 -0400
+
+    Don't map the CLINT, since it never used in the kernel in supervisor mode
+
+[33mcommit a9b3dd457c647d2836080af4f1cd7c7cb4d1a40d[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Mon Oct 5 06:59:33 2020 -0400
+
+    eliminate virtio DMA into kernel stacks.
+
+[33mcommit 271d89ae3065d397e26faa8e05aeec5cc3cd8934[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Mon Oct 5 06:26:58 2020 -0400
+
+    improve virtio_disk comments; bring it closer to wording in the spec
+
+[33mcommit da002a48fbbf69a0d965755d9f6b66817e8a15a5[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Sun Oct 4 13:29:04 2020 -0400
+
+    don't unpin if recovering -- the resulting negative refcnt suppresses next unpin
+
+[33mcommit 792d60e91224bc15ce41aaff2560a82b63fdf06f[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Sun Oct 4 09:21:03 2020 -0400
+
+    avoid deadlock by disk intr acking interrupt first, then processing ring
+
+[33mcommit e3672e018aaaadafccc3634911d69f46ec4b4819[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Sun Oct 4 08:44:32 2020 -0400
+
+    often causes deadlock after a few minutes
+
+[33mcommit 9c8d1e2909ef903b34fc89a8e3f40486f73c8fa4[m
+Author: Fumiya Shigemitsu <shfy1014@gmail.com>
+Date:   Mon Oct 21 21:01:07 2019 +0900
+
+    Fix minor typos
+
+[33mcommit f2827b2c7b1afffa4d0508fd51e331c39e97e8cc[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Sat Oct 3 10:21:04 2020 -0400
+
+    Clarify CLINT and PLIC acronym
+
+[33mcommit 8ffdfad990fe3bfd6405c316f3f9a0fd7c8c6dbd[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Fri Oct 2 07:51:15 2020 -0400
+
+    Add s to many printf statements that expect it (thanks Cece Chu)
+    Add dirtest to the list of tests
+
+[33mcommit 675060882480c21915629750a5a504d9da445ba3[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Thu Sep 24 13:18:54 2020 -0400
+
+    When either_copyin/out fails, return an error from write/read
+    
+    Add a test to check that read/write return an error
+
+[33mcommit 8c67f96b72b052083f1ac538141a4a16ca0e1b5c[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Sun Sep 6 14:20:18 2020 -0400
+
+    better grind error messages
+
+[33mcommit b9359c353318ba70596b55ec57f8d9f6c43c2758[m
+Author: Matt Harvey <matt@teamdawg.org>
+Date:   Mon Sep 14 14:49:57 2020 -0700
+
+    Corrects order of UART RX/TX interrupt enable bits
+    
+    (per http://byterunner.com/16550.html and manually tested in qemu bare metal echo)
+
+[33mcommit b96547403df0e07865bc2269215cfeb0260b893d[m
+Author: Fumiya Shigemitsu <shfy1014@gmail.com>
+Date:   Mon Oct 21 21:01:07 2019 +0900
+
+    Fix minor typos
+
+[33mcommit b418a345375b3b787b4aad43a077e2f25f5f395c[m
+Merge: 79899c7 6781ac0
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Sat Oct 3 16:33:41 2020 -0400
+
+    Merge pull request #25 from matth79/patch-1
+    
+    Corrects order of UART RX/TX interrupt enable bits
+
+[33mcommit 1c4b582fc74a3b6192f7a1aba1c667b1b5e840bd[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Sat Oct 3 10:21:04 2020 -0400
+
+    Clarify CLINT and PLIC acronym
+
+[33mcommit d9c7b13acce9ac17e550ec02799edf8da059d78a[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Fri Oct 2 07:51:15 2020 -0400
+
+    Add s to many printf statements that expect it (thanks Cece Chu)
+    Add dirtest to the list of tests
+
+[33mcommit 788b4d1bc9a761212fe4f611cb02e8d34aca1775[m
+Merge: 2055fe1 05074ba
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Wed Sep 30 17:16:05 2020 -0400
+
+    Merge branch 'riscv' of g.csail.mit.edu:xv6-dev into riscv
+
+[33mcommit 05074badc447ce9532824924bfc41a003579beb0[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Thu Sep 24 13:18:54 2020 -0400
+
+    When either_copyin/out fails, return an error from write/read
+    
+    Add a test to check that read/write return an error
+
+[33mcommit 6781ac00366e2c46c0a4ed18dfd60e41a3fa4ae6[m
+Author: Matt Harvey <matt@teamdawg.org>
+Date:   Mon Sep 14 14:49:57 2020 -0700
+
+    Corrects order of UART RX/TX interrupt enable bits
+    
+    (per http://byterunner.com/16550.html and manually tested in qemu bare metal echo)
+
+[33mcommit 2055fe13ac413a53d74baafdfa47e4c892ff9dc9[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Sun Sep 6 14:20:18 2020 -0400
+
+    better grind error messages
+
+[33mcommit e23d53f27f6e187732a92a2b4705639d1c260f05[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Fri Aug 28 16:21:07 2020 -0400
+
+    Delete doc dir because they take much space in student submissions
+
+[33mcommit 79899c747970f7b7e1cd69f714e2146621727bc5[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Fri Aug 28 16:21:07 2020 -0400
+
+    Delete doc dir because they take much space in student submissions
+
+[33mcommit 490f91ab53e22d90afb1ee37d5148e341ccf538e[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Fri Aug 28 05:51:48 2020 -0400
+
+    move panicked check to uart.c
+
+[33mcommit 748809e1b36cd08b21ddfdf79486787cc5c85453[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Fri Aug 28 05:44:09 2020 -0400
+
+    suppress write() output after panic()
+
+[33mcommit de434fd933a07fba80d16441a5cd70ebebcde518[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Thu Aug 27 07:05:13 2020 -0400
+
+    Remove obselete ifdef that shouldn't have been there ever
+
+[33mcommit 0b4e78f3a94baae548b535ac8de80d2ce4c963c8[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Thu Aug 27 06:21:10 2020 -0400
+
+    fix usertests to pass all the riscv-sol-fall20 solutions.
+
+[33mcommit ffb2ee074a42ed30a87fd6804682fa62eca13500[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Fri Aug 28 05:51:48 2020 -0400
+
+    move panicked check to uart.c
+
+[33mcommit db067d24da0b6472afe9ce4165e0868772b11964[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Fri Aug 28 05:44:09 2020 -0400
+
+    suppress write() output after panic()
+
+[33mcommit 2ec9c6ed66629fd5b833f06af2080eab46c0af35[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Thu Aug 27 07:05:13 2020 -0400
+
+    Remove obselete ifdef that shouldn't have been there ever
+
+[33mcommit d7e5f269106f4b76fcbd90331a3b44f879ee9c54[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Thu Aug 27 06:21:10 2020 -0400
+
+    fix usertests to pass all the riscv-sol-fall20 solutions.
+
+[33mcommit 0bb2533f73fb34348072da49b7970b08bfd9ac27[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Fri Aug 21 10:55:34 2020 -0400
+
+    Adjust a few prototypes to be explicit that they don't take arguments
+
+[33mcommit 2a4a8764a52cccc128aa1a6d7b321bafc14b48e6[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Wed Aug 19 13:10:14 2020 -0400
+
+    touch sbrk()-allocated memory to make sure it exists
+
+[33mcommit 5860dcd07d9a9cba5c7ebf7488636d131015316d[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Wed Aug 19 12:35:14 2020 -0400
+
+    usertest for exec() out of memory recovery
+    and fix a few exec() bugs
+
+[33mcommit d4d487731ad760376999130fc2ad520c3dd6166c[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Tue Aug 18 20:48:53 2020 -0400
+
+    Use the major number defined in file.h.  The minor number is ignored;
+    might as well use 0.
+
+[33mcommit 3c25112f382e6ccdfda927125cfe30d2b7d6b9df[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Mon Aug 17 14:25:12 2020 -0400
+
+    Delete some obselete stuff
+
+[33mcommit efaa7b8e2ae2ae059f3985bda718d91f3501b294[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Fri Aug 21 10:55:34 2020 -0400
+
+    Adjust a few prototypes to be explicit that they don't take arguments
+
+[33mcommit 59a9863a17d881498bf7519878566f74341a1b71[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Wed Aug 19 13:10:14 2020 -0400
+
+    touch sbrk()-allocated memory to make sure it exists
+
+[33mcommit aefa2697d705e316aa5255004e4b6a129e9afe2a[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Wed Aug 19 12:35:14 2020 -0400
+
+    usertest for exec() out of memory recovery
+    and fix a few exec() bugs
+
+[33mcommit b33574df38f358ba2173caa92e8287b5b0cb9cff[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Tue Aug 18 20:48:53 2020 -0400
+
+    Use the major number defined in file.h.  The minor number is ignored;
+    might as well use 0.
+
+[33mcommit 740d36373630e519117077f867437c9abbfd1f8d[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Mon Aug 17 14:25:12 2020 -0400
+
+    Delete some obselete stuff
+
+[33mcommit 95dad4c061d6e1f036d75cc041367a8f12b92982[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Sat Aug 15 05:46:32 2020 -0400
+
+    x
+
+[33mcommit f2ec6777bd530f949c235d7f0386286314a2f601[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Thu Aug 13 14:10:58 2020 -0400
+
+    fix a bug in the out-of-memory handling code in exec
+
+[33mcommit 8dc71a257d80d1e2f56cd7f931ca389fbb727b5c[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Thu Aug 13 10:22:07 2020 -0400
+
+    handle another out-of-memory in fork(). the policy here is not consistent,
+    since other calls (e.g. exec()) panic on out of memory.
+
+[33mcommit bc51626aab45f420652f20948a1ffa5398ad9446[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Thu Aug 13 09:19:23 2020 -0400
+
+    try to handle a few of the possible out-of-memory errors in fork()
+
+[33mcommit a8dd44cf595bb691ec21a16e01eaaf9b527a05ca[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Thu Aug 13 08:46:28 2020 -0400
+
+    modify uvmunmap() to be in aligned pages
+    fix a bug in fork() recovering from out of memory
+
+[33mcommit e283514ad038b7a14f58413e809c7a74766b738e[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Thu Aug 13 08:04:56 2020 -0400
+
+    pa isn't needed in the uvmunmap() loop
+
+[33mcommit b154cf091c57db1b412a022490c0cec009b4cf6b[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Sat Aug 15 05:46:32 2020 -0400
+
+    x
+
+[33mcommit 4a87a0ae8bc4a186842fb5f57454412de56f52bc[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Thu Aug 13 14:10:58 2020 -0400
+
+    fix a bug in the out-of-memory handling code in exec
+
+[33mcommit adee82c3e7334a09996c0fe9cc75d9a80abc81c8[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Thu Aug 13 10:22:07 2020 -0400
+
+    handle another out-of-memory in fork(). the policy here is not consistent,
+    since other calls (e.g. exec()) panic on out of memory.
+
+[33mcommit 4c22c54480f020c36de120ce868912c022e48113[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Thu Aug 13 09:19:23 2020 -0400
+
+    try to handle a few of the possible out-of-memory errors in fork()
+
+[33mcommit 70c6fe861e64195032083a9fd59a81bd113d1b0b[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Thu Aug 13 08:46:28 2020 -0400
+
+    modify uvmunmap() to be in aligned pages
+    fix a bug in fork() recovering from out of memory
+
+[33mcommit e1a2cd59faf0cf7a3b315cefff11d68b68ec54a7[m
+Merge: d32eac3 315c37c
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Thu Aug 13 08:05:13 2020 -0400
+
+    Merge branch 'riscv' of g.csail.mit.edu:xv6-dev into riscv
+
+[33mcommit d32eac366fd06ec58cc3b34a3ca1824864bd7618[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Thu Aug 13 08:04:56 2020 -0400
+
+    pa isn't needed in the uvmunmap() loop
+
+[33mcommit 56e7cebdb957ef12fcd9c0800887cd44fb5c250d[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Mon Aug 10 20:28:12 2020 -0400
+
+    Update to the latest specs
+
+[33mcommit 315c37c0f1e7c05f7b7d0ec145a2002b0612c49c[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Mon Aug 10 20:28:12 2020 -0400
+
+    Update to the latest specs
+
+[33mcommit 468946781fd551d69252f13a41ffc77c5e30fae9[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Mon Aug 10 19:41:57 2020 -0400
+
+    copyright and 6.S081
+
+[33mcommit 84dcf8a738f5349fdb37449502086b2b3c95763c[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Mon Aug 10 19:41:57 2020 -0400
+
+    copyright and 6.S081
+
+[33mcommit fa71d7fca2914af0a22f4cae3f40c6346b5fdc2c[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Mon Aug 10 16:42:33 2020 -0400
+
+    Ack bug finders.
+
+[33mcommit 5dace6737104d817674cfc41d41719ba58009df6[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Mon Aug 10 16:25:51 2020 -0400
+
+    Typo (thanks yt <jaichenhengjie@qq.com>)
+
+[33mcommit 737bd3a55d9380906f097f1d82d47fe2b23bf486[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Mon Aug 10 16:42:33 2020 -0400
+
+    Ack bug finders.
+
+[33mcommit 2db95f08b14f2779a31cb9e3e830f762f36f2660[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Mon Aug 10 16:25:51 2020 -0400
+
+    Typo (thanks yt <jaichenhengjie@qq.com>)
+
+[33mcommit f14aa421c456875fbb5fff0ef2f5c4154f11e38d[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Mon Aug 10 13:55:26 2020 -0400
+
+    Generate initcode without compressed extensions
+
+[33mcommit c24844714bf68feb8965c16be6ad9c82e27cc530[m
+Author: Asami Doi <doiasami1219@gmail.com>
+Date:   Fri Mar 20 12:33:32 2020 +0900
+
+    update initcode to avoid using the compressed extension
+
+[33mcommit 9eff4b0871ca68376bc409c991fbce414e700921[m
+Author: Takahiro <hogehoge@gachapin.jp>
+Date:   Sat Apr 18 14:49:54 2020 -0700
+
+    Write interrupt ack register in virtio_disk_intr()
+
+[33mcommit b557e7c32e935b9bb2f5d8ed8503de52f43cf87f[m
+Author: Jonathan Kimmitt <jonathan@kimmitt.uk>
+Date:   Thu Jan 16 15:05:27 2020 +0000
+
+    Update ramdisk.c
+    
+    The qemu syntax for a ram disk was documented incorrectly. The documented syntax is here:
+    https://qemu.weilnetz.de/doc/qemu-doc.html
+
+[33mcommit ffcb883adff508497f71fae6ca72a8fa70483edc[m
+Author: Fumiya Shigemitsu <shfy1014@gmail.com>
+Date:   Mon Oct 21 21:01:07 2019 +0900
+
+    Fix minor typos
+
+[33mcommit 96a20b0c0fc8c0376e02f261361e22d6c6c839f9[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Mon Aug 10 13:55:26 2020 -0400
+
+    Generate initcode without compressed extensions
+
+[33mcommit 050234233521bfe62da9bd5f93b0e78de30d810b[m
+Merge: 93ca555 8b05265
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Mon Aug 10 13:54:58 2020 -0400
+
+    Merge pull request #9 from d0iasm/riscv
+    
+    update initcode to avoid using the compressed extension
+
+[33mcommit 93ca5550b8888bd76815b75203fcea02ef295aa4[m
+Merge: 12c131d 7a5fcb2
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Mon Aug 10 13:24:57 2020 -0400
+
+    Merge pull request #10 from takahirox/VirtioInterruptAck
+    
+    Write virtio interrupt ack register in virtio_disk_intr()
+
+[33mcommit 12c131de3eb87e725a6a4a385fcedf6b78f9b510[m
+Merge: d28c5d9 4cf0b09
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Mon Aug 10 13:14:41 2020 -0400
+
+    Merge pull request #8 from rui314/cat-fix
+    
+    cat should exit normally if reading from stdin
+
+[33mcommit d28c5d9837a50b6ae26f03bc84a9dc0d7792562e[m
+Merge: 6b593b9 2b040aa
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Mon Aug 10 13:14:14 2020 -0400
+
+    Merge pull request #6 from jrrk2/riscv
+    
+    Update ramdisk.c
+
+[33mcommit 6b593b9eaef575d7d922c202ca5e4d3a0ff317bf[m
+Merge: d8fe177 c31d35d
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Mon Aug 10 13:05:28 2020 -0400
+
+    Merge pull request #4 from 4ge32/riscv
+    
+    Fix minor typos
+
+[33mcommit c31d35d8031c88b7e1ea8657cc9806dfdd4c3ef9[m
+Merge: 90eb90b d8fe177
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Mon Aug 10 13:05:17 2020 -0400
+
+    Merge branch 'riscv' into riscv
+
+[33mcommit d8fe1773b26758c7c7b8f36724cd822555b33612[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Fri Aug 7 16:56:00 2020 -0400
+
+    test string system call arguments that cross over the end of the last page.
+
+[33mcommit 76d6c57edec14071156e7780f7e8e08c200cf166[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Fri Aug 7 16:39:56 2020 -0400
+
+    test copyinstr()'s handling of the terminating null
+
+[33mcommit e3b7058907dff779cf94e23bf6bb84245faf481d[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Fri Aug 7 15:06:43 2020 -0400
+
+    streamline copyin/copyout code in usertests
+    fix bugs in read/write return values when there's an error
+
+[33mcommit a93321cb2547dbb48bf8ce9ad623ac19eefbecea[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Fri Aug 7 14:34:39 2020 -0400
+
+    test pointer checking in copyin, copyout, copyinstr
+
+[33mcommit 1f555198d61d1c447e874ae7e5a0868513822023[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Thu Aug 6 20:30:43 2020 -0400
+
+    Change tf -> trapframe in a few comments
+
+[33mcommit 7f35d7a14efe56905d340a0e318f01c7c514320d[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Fri Aug 7 05:32:48 2020 -0400
+
+    modify each page in usertests countfree()
+    get rid of static for walk() and freewalk()
+
+[33mcommit 2ae9c8e2722282d9a619c1745d845fb5d862c518[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Thu Jul 23 06:27:20 2020 -0400
+
+    defines for UART register bits
+
+[33mcommit 0f50e9527c68168c8114a38b211a8744e3bd2473[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Wed Jul 22 10:31:46 2020 -0400
+
+    fix printf() in interrupts
+
+[33mcommit 27057bc9b467db64a3de600f27d6fa3239a04c88[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Mon Jul 20 06:59:26 2020 -0400
+
+    interrupt-driven uart output, hopefully a nice example for teaching.
+
+[33mcommit 1e72d5ca087985938589ce509ace4914039860d3[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Fri Jul 17 16:40:57 2020 -0400
+
+    cpu->scheduler -> cpu->context to reduce confusion
+
+[33mcommit 5494c9170587b17c9d749e19753fa3e7fb6958b9[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Fri Jul 17 16:29:52 2020 -0400
+
+    rename p->tf to p->trapframe, for consistency with p->context
+
+[33mcommit 82981fab6bbd36dc0ff24201a11d365c4a2c6b1d[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Fri Jul 17 16:29:43 2020 -0400
+
+    drop QEMUEXTRA
+
+[33mcommit af9eb9114c2f8700d4315eaa1e2d637c2aaaf210[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Thu Jul 16 11:38:08 2020 -0400
+
+    make "echo hello > x" truncate file x.
+
+[33mcommit 672217ae2a3d68b73b2229ab368979ef7790e28a[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Fri Nov 8 13:21:06 2019 -0500
+
+    allow more files
+
+[33mcommit b62d4d412bf36eb445dd05cf80762ba8837de6ce[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Thu Nov 7 09:46:20 2019 -0500
+
+    more grind
+
+[33mcommit 897f6f34ddf2b45f7ef0e2474691f28cb6c9c0bd[m
+Author: rtm <rtm@csail.mit.edu>
+Date:   Thu Nov 7 06:43:38 2019 -0500
+
+    yet another toolchain name
+
+[33mcommit 6cb6764bb1778b8c4f92680295f928fec074e3d7[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Fri Aug 7 16:56:00 2020 -0400
+
+    test string system call arguments that cross over the end of the last page.
+
+[33mcommit 234391b6bf4d4809930300c1637403987c273461[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Fri Aug 7 16:39:56 2020 -0400
+
+    test copyinstr()'s handling of the terminating null
+
+[33mcommit 354adfdafc3993771f58236771e213016ff9aed8[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Fri Aug 7 15:06:43 2020 -0400
+
+    streamline copyin/copyout code in usertests
+    fix bugs in read/write return values when there's an error
+
+[33mcommit f01b1a8b71b8e0e8d7564a475a31c4e951463874[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Fri Aug 7 14:34:39 2020 -0400
+
+    test pointer checking in copyin, copyout, copyinstr
+
+[33mcommit e4b93466792125248bc5e2dfd9c000ab10c59528[m
+Merge: 8b9b799 6c3099d
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Fri Aug 7 05:33:23 2020 -0400
+
+    Merge branch 'riscv' of g.csail.mit.edu:xv6-dev into riscv
+
+[33mcommit 8b9b7999376f67f45cf9efde675d418841a264ce[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Fri Aug 7 05:32:48 2020 -0400
+
+    modify each page in usertests countfree()
+    get rid of static for walk() and freewalk()
+
+[33mcommit 6c3099d31401dfb76204c276572b7a34caad9b44[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Thu Aug 6 20:30:43 2020 -0400
+
+    Change tf -> trapframe in a few comments
+
+[33mcommit 050a69610afee9884bc3df27215d0d5534743975[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Thu Jul 23 06:27:20 2020 -0400
+
+    defines for UART register bits
+
+[33mcommit db0f092ae44f85db450718588c2deea080c27d0e[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Wed Jul 22 10:31:46 2020 -0400
+
+    fix printf() in interrupts
+
+[33mcommit 823864099d0d8def9d4bcf9e382cf42e05bd7afa[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Mon Jul 20 06:59:26 2020 -0400
+
+    interrupt-driven uart output, hopefully a nice example for teaching.
+
+[33mcommit 3b053f5d58b4914c6389588ad4e556bc887bc99d[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Fri Jul 17 16:40:57 2020 -0400
+
+    cpu->scheduler -> cpu->context to reduce confusion
+
+[33mcommit d6dad42aaffe7460025f103ed3807f589df6b24d[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Fri Jul 17 16:29:52 2020 -0400
+
+    rename p->tf to p->trapframe, for consistency with p->context
+
+[33mcommit 7a7cd1adefb6eb29523c8fcb762edfe489639f85[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Fri Jul 17 16:29:43 2020 -0400
+
+    drop QEMUEXTRA
+
+[33mcommit f3979b7212f1bb9d72947f54abead5be973c6aed[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Thu Jul 16 11:38:08 2020 -0400
+
+    make "echo hello > x" truncate file x.
+
+[33mcommit 7a5fcb28b33d829a203d62063ec2b98ab6e72c7b[m
+Author: Takahiro <hogehoge@gachapin.jp>
+Date:   Sat Apr 18 14:49:54 2020 -0700
+
+    Write interrupt ack register in virtio_disk_intr()
+
+[33mcommit 8b052656a055c201235298b87424f64dd2e967ca[m
+Author: Asami Doi <doiasami1219@gmail.com>
+Date:   Fri Mar 20 12:33:32 2020 +0900
+
+    update initcode to avoid using the compressed extension
+
+[33mcommit 4cf0b0973eb0874737260d0bc5643c891b454832[m
+Author: Rui Ueyama <rui314@gmail.com>
+Date:   Wed Mar 11 16:05:43 2020 +0900
+
+    cat should exit normally if reading from stdin
+
+[33mcommit 2b040aa379496f524bef5a2575c0e06c34408044[m
+Author: Jonathan Kimmitt <jonathan@kimmitt.uk>
+Date:   Thu Jan 16 15:05:27 2020 +0000
+
+    Update ramdisk.c
+    
+    The qemu syntax for a ram disk was documented incorrectly. The documented syntax is here:
+    https://qemu.weilnetz.de/doc/qemu-doc.html
+
+[33mcommit c98e1afe7996b639fd36285240e9171b4866fe9d[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Fri Nov 8 13:21:06 2019 -0500
+
+    allow more files
+
+[33mcommit 507028de9df94a1e93cdfcd3d1c19fc184d91f06[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Thu Nov 7 09:46:20 2019 -0500
+
+    more grind
+
+[33mcommit d1b8b19cd36299555be2085f526f48a639e5b7e6[m
+Merge: 20f1dd9 73e931f
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Thu Nov 7 06:44:33 2019 -0500
+
+    Merge branch 'riscv' of g.csail.mit.edu:xv6-dev into riscv
+
+[33mcommit 20f1dd940964d7e01cf8c8d9b1a5b751840b7f3b[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Thu Nov 7 06:44:23 2019 -0500
+
+    more grind
+
+[33mcommit 73e931fd420163cb3e7757a3426ca650b4cd3419[m
+Author: rtm <rtm@csail.mit.edu>
+Date:   Thu Nov 7 06:43:38 2019 -0500
+
+    yet another toolchain name
+
+[33mcommit 16b3b63f06c1ea17da484aeebea4a57fb2a6e44a[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Wed Nov 6 11:18:43 2019 -0500
+
+    grind: run parallel system calls forever
+
+[33mcommit 028af2764622d489583cd88935cd1d2a7fbe8248[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Tue Oct 29 04:32:55 2019 -0400
+
+    mention LRU list a bit more in comments.
+
+[33mcommit 9de9211b1158bfbe169c5099dae11432d5950105[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Mon Oct 28 05:58:28 2019 -0400
+
+    usertests -c to repeat tests forever
+    detect memory leaks
+    no more "already ran user tests"
+
+[33mcommit e7ffb74ad1e4c4e8a4a5e62968f52499dc0c7079[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Sun Oct 27 13:36:46 2019 -0400
+
+    fix a potential memory leak
+
+[33mcommit d9160fb4b98e3ce04d3928c1fbd2ec26b3cc746a[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Sun Oct 27 08:03:19 2019 -0400
+
+    nits
+
+[33mcommit f2ab0eb644a60f946f35fcb5578fba53720edfa7[m
+Author: Anish Athalye <me@anishathalye.com>
+Date:   Mon Oct 21 22:27:18 2019 -0400
+
+    Clean up linker script
+    
+    This patch does the following:
+    
+    - Add .text.* to the .text section in the output
+    - Add an assertion that the trampoline does not overflow a page
+    - Add the .rodata section
+    - Make .sdata and .sdata.* (which is for small data) be absorbed into
+      the .data section, because we don't need to distinguish between them;
+      this prevents .sdata from appearing in the output
+    - Make the analogous change for .srodata and .sbss
+    - Make all the data sections 16-byte aligned
+    
+    This patch also updates the .editorconfig for *.ld files.
+
+[33mcommit 90eb90b5e203299427c3fde8c996a48835fc93cf[m
+Author: Fumiya Shigemitsu <shfy1014@gmail.com>
+Date:   Mon Oct 21 21:01:07 2019 +0900
+
+    Fix minor typos
+
+[33mcommit 2821d43cc95b4f9faf79ff94daa5d3a8ea5e7861[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Wed Oct 16 12:27:08 2019 -0400
+
+    nits
+
+[33mcommit f2df0fa5471c9951ff9a12bea51efbe22afb196e[m
+Author: Anish Athalye <me@anishathalye.com>
+Date:   Tue Oct 8 21:24:03 2019 -0400
+
+    Fix ulib's memmove to handle overlap when src<dst
+
+[33mcommit 8509784d8000d6791a205626e81b03b3f9bf856b[m
+Author: Anish Athalye <me@anishathalye.com>
+Date:   Tue Oct 8 21:18:54 2019 -0400
+
+    Add implementations of memcmp and memcpy to ulib
+    
+    This is necessary because gcc may generate calls to memcmp, memset,
+    memcpy, and memmove when compiling with -nostdlib.
+
+[33mcommit a52d296814d869f16ced4fb68246223b4a64fa38[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Thu Oct 3 15:09:31 2019 -0400
+
+    delete alarmtest from riscv
+
+[33mcommit 56583b1402a7f8fad0f8c3c296e26f12b1114c95[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Thu Oct 3 15:02:19 2019 -0400
+
+    updated alarmtest
+
+[33mcommit 78f863f8aead6346dfdfc62e91af25c9383e25a7[m
+Author: Anish Athalye <me@anishathalye.com>
+Date:   Mon Sep 30 20:38:17 2019 -0400
+
+    Add editorconfig
+
+[33mcommit d4416744777740f74a19294d332697639714d8d4[m
+Author: Anish Athalye <me@anishathalye.com>
+Date:   Mon Sep 30 20:15:19 2019 -0400
+
+    Make QEMU memory size match PHYSTOP
+
+[33mcommit deaff5d8a689e6aa7b64b38619cf667b963256da[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Tue Sep 24 14:41:51 2019 -0400
+
+    no buf->qnext
+
+[33mcommit 9ead904afef8d060c2cc5cee6bd8e8d223de8c40[m
+Author: Xi Wang <xi@cs.washington.edu>
+Date:   Thu Sep 19 10:31:04 2019 -0700
+
+    fix major validation
+    
+    fileread/filewrite should validate major to avoid buffer overflows
+    or bogus function pointers.
+
+[33mcommit 37df68e5dedbf2a26c2bf0bdae090b206ce78b48[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Mon Sep 23 07:24:41 2019 -0400
+
+    story is more complex than I thought.
+
+[33mcommit d175beadf5f009d0fb8881e32c913b1bc175c9f6[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Mon Sep 23 06:50:25 2019 -0400
+
+    bug fix: reparent() sometimes deadlocked
+    bug fix: exit() sometimes released a different parent lock than it acquired
+    usertests
+
+[33mcommit 843ce7776568ac2d4f71886e95077709b83bc613[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Sat Sep 21 14:20:21 2019 -0400
+
+    Stress copyin for the full allocated page (good for lazy lab).
+
+[33mcommit d940fd122d8e04dfc1122ca6b224703eead55f66[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Sat Sep 21 04:54:25 2019 -0400
+
+    don't leak memory if exec() arguments are invalid.
+
+[33mcommit 6b79ee69b799c03f939c2ffc52c30d2bcdf7f2ef[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Sat Sep 21 02:07:24 2019 -0400
+
+    Refactor big sbrk test in smaller, easier-to-understand tests
+
+[33mcommit ee67dbd211512f279a9032eec31a81043dbf3ff2[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Fri Sep 20 17:07:41 2019 -0400
+
+    Not much: factor sbrksimple from big sbrktest
+
+[33mcommit 7c7ed208221dbd115c7cc88faa0e42150cfa14a2[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Fri Sep 20 13:09:26 2019 -0400
+
+    don't leak a file system block if the buf argument to write is invalid
+    and a usertest
+
+[33mcommit e1a37303c89696a110c61a156768ea15cc03a246[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Fri Sep 20 12:13:57 2019 -0400
+
+    yet another sbrk() bug fix, and usertest
+
+[33mcommit 4de161f973aa06d5f08de1063d3fc9c22e4547e7[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Fri Sep 20 11:35:27 2019 -0400
+
+    don't panic if a program frees all its memory with sbrk().
+    if a program sbrk()'s to a non-page-boundary, don't free that page.
+    corresponding usertests.
+
+[33mcommit ca30cac702157d0d3a2c89e4436f0bff303a6e0a[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Fri Sep 20 10:27:03 2019 -0400
+
+    more incorrect cast to uint
+
+[33mcommit 402e7b56053312f4e96737ee7cd82395c998f00f[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Fri Sep 20 09:41:03 2019 -0400
+
+    fix a potential kernel crash
+    add a regression test for it
+
+[33mcommit 57e40a020411924dc89fba9fdd22a048ff4513f0[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Fri Sep 20 06:02:47 2019 -0400
+
+    nits
+
+[33mcommit ba1c42849ac4b1b8f845213f553d629e631471d7[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Thu Sep 19 15:39:05 2019 -0400
+
+    print name at start of test
+
+[33mcommit 25e6803e171fd0cbbf71f889ba2d80621e0336f3[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Thu Sep 19 15:22:45 2019 -0400
+
+    a comment
+
+[33mcommit 3f6e372a29709225f53f4d326170af1aeecb2cf5[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Thu Sep 19 15:14:52 2019 -0400
+
+    make exec test self contained
+
+[33mcommit f6a37c17f26fe743f9c4773352d8b823ccc4e9e3[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Thu Sep 19 06:58:28 2019 -0400
+
+    Standarize the way tests are run and report errors
+    Support running one test, by specifying the name as a command argument to usertests
+
+[33mcommit 0d01de2a32b0c7ae1eaee5d79faf075cf38df997[m
+Merge: 2df4235 b150908
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Tue Sep 17 06:08:10 2019 -0400
+
+    Merge branch 'riscv' of g.csail.mit.edu:xv6-dev into riscv
+
+[33mcommit 2df42355f7bf63b7c4344094955330048b5090f6[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Tue Sep 17 06:07:58 2019 -0400
+
+    all of PTE_FLAGS
+
+[33mcommit b150908354dd166ed9f00287064216d09a3ba807[m
+Author: Xi Wang <xi@cs.washington.edu>
+Date:   Sat Sep 14 01:13:21 2019 +0800
+
+    add `-bios none' to silence qemu
+    
+    QEMU 4.1+ emits warnings if -bios is not given, as newer versions
+    will load the OpenSBI firmware in this case.  Pass `-bios none' to
+    avoid this issue.
+
+[33mcommit 036b5edf12fccc06a11287ad58565f253ab2eef6[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Thu Sep 12 10:48:48 2019 -0400
+
+    set architecture riscv:rv64 -- fix gdb trampoline disassembly, thanks jonathan
+
+[33mcommit 35010f0d0fae49e91b92585f3e97e56da4ac0082[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Wed Sep 11 10:04:40 2019 -0400
+
+    error exit status is 1
+
+[33mcommit 7e6c37e67e6da62e02089fc3292569103b7e94b3[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Tue Sep 10 12:30:10 2019 -0400
+
+    Support exit status for exit/wait
+    One test case for returning a exit status
+    Passes usertests, but haven't used it to simplify tests
+
+[33mcommit 035cca95fe87c67ee1e33b9edfb2d87e24476fa8[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Sun Sep 8 15:18:38 2019 -0400
+
+    Make the end variable be really at the end of bss, and delete + 4096 in freerange()
+
+[33mcommit e5b7fa62cce4787838c0e52dc9f6399babf2e75e[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Sun Sep 8 06:51:58 2019 -0400
+
+    thanks to Anthony Coulter
+
+[33mcommit fc337af2b6275d8b0b8bc41b5e2eb3619eb47bf1[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Thu Sep 5 16:50:55 2019 -0400
+
+    fix a grep bug
+
+[33mcommit c0beeccb1b46cfba7762740b901ca266adb65a6f[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Wed Sep 4 10:12:53 2019 -0400
+
+    have echo use FD 1 for clarity
+
+[33mcommit 25e113138d677eacb8f2ce872ca7ff7596ae44e0[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Tue Sep 3 16:29:48 2019 -0400
+
+    sfence.vma in trampoline as well
+
+[33mcommit 9b9e2dd0f24428659d1f931009dd6429a9f5f1ac[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Tue Sep 3 16:25:11 2019 -0400
+
+    fix sfence_vma comment
+
+[33mcommit 86a1d4b29570095ff7d668785ac9e37aa7436260[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Tue Sep 3 15:45:07 2019 -0400
+
+    sfence_vma after satp
+
+[33mcommit 64b93d175ac6eb739036b394fbb0766fbf06f5b7[m
+Author: Robert Morris <rtm@csail.mit.edu>
+Date:   Tue Aug 27 13:13:03 2019 -0400
+
+    user printf(1 -> printf(
+
+[33mcommit a3f6d9fd1e21a7339f2bc26f185f7d561bc370c4[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Mon Aug 26 21:16:33 2019 -0400
+
+    cow moved to xv6-riscv-fall19
+
+[33mcommit 92c3c02098ed0e3fabb56121ea45317e9a951ea7[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Mon Aug 26 08:49:50 2019 -0400
+
+    RISC-V port doesn't borrow this code
+
+[33mcommit 510bcde8945739d3f83cfa85df0091913f9d3e61[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Thu Aug 15 10:35:59 2019 -0400
+
+    Add major/minor/mkdev
+    Maybe apply this change to master
+
+[33mcommit 7241838b4cecefb32bad4698e748fc31d008d94d[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Tue Aug 20 20:23:18 2019 -0400
+
+    Move labs into 6.828 repo. The lab text isn't dependent on specific
+    xv6 code. Lab submission instructions etc. are likely going to be more
+    MIT 6.828 specific.
+
+[33mcommit c612d452fdb03080c77517f6c1b32b8d11c6c40a[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Tue Aug 20 13:04:12 2019 -0400
+
+    validateint doesn't test something interesting on RISC-V; delete it.
+
+[33mcommit b564fca24652dad80946b1e690db37dd87c66dbe[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Tue Aug 20 12:58:00 2019 -0400
+
+    Rationalize some constants in usertests
+
+[33mcommit d98ddadd79ae45dec44f191986bf59136dd15e88[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Tue Aug 20 12:46:56 2019 -0400
+
+    Also release buffer on failed copyout
+
+[33mcommit 6005ef5a1c0bb17a3a5da683d95ed9e1e6f44e68[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Tue Aug 20 11:57:24 2019 -0400
+
+    Release buffer also when copyin fails
+
+[33mcommit d9818b89e136ed51242257ca6cbf0a78292f862b[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Tue Aug 20 11:56:56 2019 -0400
+
+    512 -> BSIZE
+
+[33mcommit a825f22cf8783a078b65cdc3c8393811c3c1b702[m
+Merge: 21ad8c7 82638c0
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Mon Aug 19 19:27:29 2019 -0400
+
+    Merge remote-tracking branch 'origin/master' into riscv
+
+[33mcommit 82638c019ced44651d65c99aaa7c698676c217be[m
+Author: Dan Cross <cross@gajendra.net>
+Date:   Wed Mar 20 17:28:13 2019 +0000
+
+    Avoid rereading the superblock in bfree
+    
+    The superblock is read when the first process returns to
+    userspace (via the call to `iinit` from the first invocation of
+    `forkret`, when `first` is still set to 1) and cached in a
+    global; it is treated as immutable from that point on.  There is
+    no reason to re-read it in bfree.
+    
+    Removing this call seems to have simply been missed in 8320d61b
+    when this general area was last touched.  Remove it now to avoid
+    potential confusion.
+    
+    Signed-off-by: Dan Cross <cross@gajendra.net>
+
+[33mcommit 21ad8c76bc9975f2223c136ba254deda2ab8036d[m
+Author: Frans Kaashoek <kaashoek@mit.edu>
+Date:   Mon Aug 19 18:12:19 2019 -0400
+
+    A few now unused DOC

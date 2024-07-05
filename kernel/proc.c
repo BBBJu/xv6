@@ -243,7 +243,9 @@ userinit(void)
   p->sz = PGSIZE;
 
   // prepare for the very first "return" from kernel to user.
-  p->trapframe->epc = 0;      // user program counter
+  p->trapframe->epc = 0;      // user program counter   epc用于保存从内核返回到用户态时，用户程序应该继续执行的地址。初始化
+  //第一个用户程序时，设为0
+  
   p->trapframe->sp = PGSIZE;  // user stack pointer
 
   safestrcpy(p->name, "initcode", sizeof(p->name));
@@ -294,6 +296,10 @@ fork(void)
     release(&np->lock);
     return -1;
   }
+
+  //copy mask
+  np->mask = p->mask;
+
   np->sz = p->sz;
 
   // copy saved user registers.
@@ -685,4 +691,27 @@ procdump(void)
     printf("%d %s %s", p->pid, state, p->name);
     printf("\n");
   }
+}
+// Return the number of processes whose state is not UNUSED
+uint64
+nproc(void)
+{
+  struct proc *p;
+  // counting the number of processes
+  uint64 num = 0;
+  // traverse all processes
+  for (p = proc; p < &proc[NPROC]; p++)
+  {
+    // add lock
+    acquire(&p->lock);
+    // if the processes's state is not UNUSED
+    if (p->state != UNUSED)
+    {
+      // the num add one
+      num++;
+    }
+    // release lock
+    release(&p->lock);
+  }
+  return num;
 }
